@@ -1,0 +1,46 @@
+import { EDO12 } from "@/project/nota/lib/12edo";
+import { PartituraBuilder } from "../core/partituraBuilder";
+
+export function PartituraPrueba() {
+    const notaFactory = new EDO12(440);
+    const partituraBuilder = new PartituraBuilder();
+    return partituraBuilder.addNota(notaFactory.la(1))
+        .addNota(notaFactory.do(1))
+        .addNota(notaFactory.mi(1.2))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.do(1))
+        .addNota(notaFactory.mi(1))
+        .addNota(notaFactory.sol(1))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.fa(1))
+        .addNota(notaFactory.la(1))
+        .addNota(notaFactory.do(1))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.sol(1))
+        .addNota(notaFactory.si(1))
+        .addNota(notaFactory.re(1))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.do(1))
+        .addNota(notaFactory.mi(1.2))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.do(1))
+        .addNota(notaFactory.mi(1))
+        .addNota(notaFactory.sol(1))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.fa(1))
+        .addNota(notaFactory.la(1))
+        .addNota(notaFactory.do(1))
+        .addActualSection()
+        .newSection()
+        .addNota(notaFactory.sol(1))
+        .addNota(notaFactory.si(1))
+        .addNota(notaFactory.re(1))
+        .addActualSection()
+        .getPartitura();
+}
